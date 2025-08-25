@@ -13,8 +13,7 @@ public class GameInput : MonoBehaviour
     [SerializeField] private bool isMobileTesting;
     private bool isMobile = false;
     private Vector2 inputVector;
-
-    public event EventHandler OnJump;
+    //public event EventHandler OnJump;
 
     private void Awake()
     {
@@ -34,7 +33,7 @@ public class GameInput : MonoBehaviour
             flyButton.gameObject.SetActive(false);
         }
 
-        inputActions.Player.Jump.performed += Jump_Performed;
+        //inputActions.Player.Jump.performed += Jump_Performed;
     }
 
     private Vector2 GetJoyStickMovmentNormalized()
@@ -57,10 +56,10 @@ public class GameInput : MonoBehaviour
         return inputVector.normalized;
     }
 
-    public void Jump_Performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+/*    public void Jump_Performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         OnJump?.Invoke(this, EventArgs.Empty);
-    }
+    }*/
 
     public bool GetBurstHold()
     {

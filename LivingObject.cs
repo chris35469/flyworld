@@ -29,7 +29,7 @@ public class LivingObject : MonoBehaviour
         UpdateAliveState(false);
     }
 
-    public void Jump()
+    public void Fly()
     {
         //rigid.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         rigid.linearVelocity = new Vector3(rigid.linearVelocity.x, jumpForce, rigid.linearVelocity.z);
